@@ -1,0 +1,152 @@
+/* Variables */
+:root {
+    --primary-color: #3498DB; /* Azul claro */
+    --secondary-color: #E74C3C; /* Rojo fuerte */
+    --background-color: #F9F9F9; /* Blanco muy claro */
+    --text-color: #2C3E50; /* Azul marino oscuro */
+    --banner-background: #F0F0F0; /* Gris claro */
+    --border-radius: 8px;
+    --padding: 12px;
+    --input-border-color: #2980B9; /* Azul más oscuro para el contorno */
+    --button-hover-color: #2E86C1; /* Azul intermedio para el hover de botones */
+}
+
+/* Reset y globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header */
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+    border-radius: 9.5%;
+}
+
+.titulo {
+    color: var(--text-color);
+    margin-top: 10px;
+}
+
+/* Banner */
+.banner {
+    background-color: var(--banner-background);
+    color: var(--text-color);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+
+/* Sección de inputs/outputs y botones */
+.cuerpo__encriptador {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.encriptador__input, .encriptador__output {
+    flex: 1 1 400px;
+    max-width: 600px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-area, .mensaje {
+    width: 100%;
+    height: calc(100% - 80px);
+    resize: none;
+    padding: var(--padding);
+    border: 3px solid var(--input-border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--background-color);
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.btn-encriptar, .btn-desencriptar, .btn-copiar {
+    padding: var(--padding);
+    width: 48%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-encriptar:hover, .btn-desencriptar:hover, .btn-copiar:hover {
+    background-color: var(--button-hover-color);
+}
+
+.encriptador__output {
+    position: relative;
+}
+
+.btn-copiar {
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+}
+
+/* Footer */
+footer {
+    padding: var(--padding);
+    color: var(--text-color);
+    width: 100%;
+    text-align: center;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 120px;
+    }
+
+    .botones {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-encriptar, .btn-desencriptar {
+        width: 100%;
+    }
+
+    .encriptador__input {
+        padding: 0 10px;
+    }
+}
