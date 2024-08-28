@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Textos - Alura</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="./img/a-logo.png" alt="Logo de Alura">
+        <h1 class="titulo">Encriptador de Textos</h1>
+    </header>
+
+    <section class="banner">
+        <p>No se permiten números ni caracteres especiales.</p>
+    </section>
+
+    <main class="encriptador-container">
+        <div class="encriptador-input">
+            <textarea class="text-area" placeholder="Ingresa solamente minúsculas y sin caracteres especiales."></textarea>
+            <p class="banner-input">Solo letras minúsculas, sin caracteres especiales ni números.</p>
+            
+            <div class="botones">
+                <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
+                <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+            </div>
+        </div>
+
+        <div class="encriptador-output">
+            <textarea class="mensaje" placeholder="El resultado aparecerá aquí..." readonly></textarea>
+            <button class="btn-copiar">Copiar</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>Desarrollado por Omar Vega - Alura - Oracle One G7 2024 &copy;</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
